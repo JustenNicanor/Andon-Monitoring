@@ -72,13 +72,26 @@ CREATE TABLE `data` (
   `status` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
+```
 
 Add a table for users (monitoring_system,monitoring_system_admin, monitoring_system_tech :
 
-
+```sql
 INSERT INTO users (username, password, data) 
 VALUES ('newuser', MD5('newpassword123'), 'Some extra info');
+```
+
+### 📸 Project Preview
+
+Below is a screenshot of the Material Monitoring System interface:
+
+![Andon Monitoring System Screenshot](img/andon1.png)
+![Andon Monitoring System Screenshot](img/andon2.png)
+![Andon Monitoring System Screenshot](img/andon3.png)
+![Andon Monitoring System Screenshot](img/andon4.png)
+
+
+
 
 
 
