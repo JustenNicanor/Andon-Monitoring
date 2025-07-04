@@ -1,0 +1,252 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In - Operator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+
+    <style>
+        body {
+            font-family: "Handjet", sans-serif;
+            font-size: 1rem; 
+            font-weight: 500;
+            font-style: normal;
+            font-variation-settings: "ELGR" 1, "ELSH" 2;
+            background-color: #424242;
+            margin: 0; 
+            padding: 0; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .main {
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 1rem; 
+            font-weight: 500;
+            font-style: normal;
+            font-variation-settings: "ELGR" 1, "ELSH" 2;
+            display: flex;
+            flex-direction: column; 
+            justify-content: center;
+            margin: 20px; 
+            background-color: #ccc;
+            border-radius: 1rem; 
+            padding: 20px 100px;
+            max-width: 100%; 
+            box-sizing: border-box;
+        }
+        
+        .welcome {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            box-sizing: border-box;
+            background-color: #424242;
+            text-align: center;
+            display: flex;
+            margin-bottom: 20px;
+            border-radius: 1rem; 
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 0 10%;
+            width: 300px;
+        }
+        
+        .welcome h2 {
+            font-size: 30px; 
+            color: white;
+            font-weight: 700;
+            width: 300px;
+        }
+
+        .welcome i {
+            display: flex;
+            font-size: 70px;
+            padding-top: 30px;
+            color: #ccc;
+            padding-right: 10px;
+        }
+        
+        .info-container {
+            display: flex;
+            flex-direction: column; 
+            align-items: center; 
+            font-size: 0.875rem; 
+        }
+        
+        .form-group {
+            display: flex;
+            flex-direction: column; 
+            width: 100%;
+            max-width: 100%; 
+            margin-bottom: 15px; 
+        }
+        
+        .form-group label {
+            margin-bottom: 5px;
+            padding: 0; 
+        }
+        
+        .form-group input {
+            background-color: #424242;
+            border-radius: 0.5rem; 
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); 
+            padding: 10px;
+            color: white;
+            border: none;
+            width: 100%; 
+            box-sizing: border-box;
+        }
+        
+        .form-group input::placeholder {
+            font-family: "Handjet", sans-serif;
+            font-size: 1rem;
+            color: lightgrey;
+        }
+        
+        .form-group input[type="submit"] {
+            font-family: "Handjet", sans-serif;
+            font-size: 1rem; 
+            font-weight: 500;
+            font-style: normal;
+            font-variation-settings: "ELGR" 1, "ELSH" 2;
+            background-color: #4eaeee;
+            cursor: pointer;
+            margin-top: 10px;
+            width: 100%; 
+            padding: 10px;
+            border: 1px solid black;  
+            border-radius: 0.5rem; 
+            color: black;
+        }
+        
+        .form-group input[type="submit"]:hover {
+            background-color: #0056b3;
+            color: white;
+        }
+
+        .error-message {
+            display: none;
+            color: red;
+            font-size: 0.875rem;
+            margin-top: 10px;
+        }
+
+        .error-message.active {
+            display: block;
+        }
+        
+        .admin {
+            display: flex;
+            flex-direction: column; /* Stack elements vertically */
+            align-items: center; /* Center the links horizontally */
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+            margin: 3px 0; /* Optional: adds spacing between links */
+        }
+        
+        @media (min-width: 768px) {
+            .main {
+                margin: 50px; 
+                margin-left: auto;
+                margin-right: auto;
+                max-width: 700px; 
+            }
+        
+            .welcome {
+                padding: 0 20%; 
+            }
+        
+            .form-group input {
+                padding: 15px; 
+            }
+        
+            .form-group input[type="submit"] {
+                padding: 15px; 
+            }
+        }
+
+        footer {
+            background-color: #424242;
+            color: lightgray;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="main">
+        <div class="welcome">
+            <i class="fas fa-user-tie"></i> <!-- Business person icon -->
+            <h2>Operator Log In</h2>
+        </div>
+        <div class="info-container">
+            <form id="loginForm" method="post" action="login.php">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" placeholder="Enter your username" required>    
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>    
+                </div>
+                
+                <div class="form-group">
+                    <input type="submit" value="Submit">
+                </div>
+
+                <div class="admin">
+                    <a href="login_admin.html"> Switch to Admin </a>
+                    <a href="login_tech.html"> Switch to Technician </a>
+                </div>
+                
+                <div id="error-message" class="error-message"></div>
+            </form>
+        </div>        
+    </div>
+    <footer>
+        <p>Developed by Denise Ira Jubilo, Raven Del Rosario, Justen Nicanor, and Carl John Zoleta <br>Student Interns, PUP, 2024</p>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('loginForm');
+            const errorMessage = document.getElementById('error-message');
+        
+            form.addEventListener('submit', (event) => {
+                event.preventDefault(); // Prevent form submission for AJAX
+        
+                const formData = new FormData(form);
+        
+                fetch('login.php', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        errorMessage.classList.remove('active');
+                        window.location.href = 'operatorPage.php'; // Redirect on successful login
+                    } else {
+                        errorMessage.textContent = data.message;
+                        errorMessage.classList.add('active');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    errorMessage.textContent = 'An error occurred. Please try again later.';
+                    errorMessage.classList.add('active');
+                });
+            });
+        }); 
+    </script>
+</body>
+</html>

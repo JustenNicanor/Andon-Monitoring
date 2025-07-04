@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andon Monitoring System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Andon Monitoring</h1>
+        <div id="date-time-container">
+            <p id="date-time"></p>
+        </div>
+    </header>
+    <main>
+        <div class="leds">
+            <div id="green-led" class="led">
+                <button id="reset-button">TURN OFF</button>
+            </div>
+            <div id="orange-led" class="led">
+                <button id="orange-button">IDLE / <br>PREPARATION<br></button>
+            </div>
+            <div id="red-led" class="led">
+                <button id="red-button">DOWNTIME</button>
+            </div>
+        </div>
+        <div class="status">
+            <table>
+                <tr>
+                    <th>LED</th>
+                    <th>Duration <br> (hh:mm:ss)</th>
+                    <th>Live Time <br> (hh:mm:ss)</th>
+                </tr>
+                <tr>
+                    <td>Downtime</td>
+                    <td><span id="red-duration" class="timer">00:00:00</span></td>
+                    <td><span id="red-live-time" class="timer">00:00:00</span></td>
+                </tr>
+                <tr>
+                    <td>Idle / Prep</td>
+                    <td><span id="orange-duration" class="timer">00:00:00</span></td>
+                    <td><span id="orange-live-time" class="timer">00:00:00</span></td>
+                </tr>
+                <tr>
+                    <td>Total Duration</td>
+                    <td colspan="2"><span id="combined-duration" class="timer">00:00:00</span></td>
+                </tr>
+            </table>
+        </div>
+    </main>
+    <footer>
+        <p>Developed by <br>Denise Ira Jubilo, Raven Del Rosario, Justen Nicanor, and Carl John Zoleta <br>Student Interns, PUP, 2024</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
