@@ -47,6 +47,8 @@ monitoring_system_admin – contains admin user credentials
 
 monitoring_system_tech – contains technician user credentials
 
+---
+
 #### 📄 Users Table Example
 
 Add a sample user:
@@ -54,6 +56,8 @@ Add a sample user:
 ```sql
 INSERT INTO users (username, password, data) 
 VALUES ('newuser', MD5('newpassword123'), 'Some extra info');
+
+---
 
 #### 🚀 Accessing the Website Locally
 
@@ -70,6 +74,9 @@ Visit the technician login page at:
 Visit the technician login page at:
 
 http://localhost/Andon%20Monitoring/login_tech.html
+
+---
+
 
 #### 👨‍💻 Technologies Used
 Frontend: HTML, CSS, JavaScript
