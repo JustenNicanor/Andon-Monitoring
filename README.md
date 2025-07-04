@@ -57,9 +57,10 @@ Add a sample user:
 INSERT INTO users (username, password, data) 
 VALUES ('newuser', MD5('newpassword123'), 'Some extra info');
 
----
 
-###### 🚀 Accessing the Website Locally
+
+
+# 🚀 Accessing the Website Locally
 
 Once your project is set up and placed inside the htdocs folder of XAMPP:
 
@@ -76,9 +77,7 @@ Visit the technician login page at:
 http://localhost/Andon%20Monitoring/login_tech.html
 
 ---
-
-
-####### 👨‍💻 Technologies Used
+# 👨‍💻 Technologies Used
 Frontend: HTML, CSS, JavaScript
 Backend: PHP
 Database: MySQL (via XAMPP)
