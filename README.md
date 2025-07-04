@@ -28,7 +28,7 @@ The **Andon Monitoring System** is a local web-based tool designed to streamline
 
 ---
 
-### 🔧 Step 2: Create Required Tables
+## 🔧 Step 2: Create Required Tables
 
 CREATE TABLE `data` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
