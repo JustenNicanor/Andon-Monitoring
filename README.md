@@ -28,7 +28,7 @@ The **Andon Monitoring System** is a local web-based tool designed to streamline
 
 ---
 
-## 🔧 Step 2: Create Required Tables
+#### 🔧 Step 2: Create Required Tables
 
 CREATE TABLE `data` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -49,7 +49,7 @@ monitoring_system_tech – contains technician user credentials
 
 ---
 
-#### 📄 Users Table Example
+##### 📄 Users Table Example
 
 Add a sample user:
 
@@ -59,7 +59,7 @@ VALUES ('newuser', MD5('newpassword123'), 'Some extra info');
 
 ---
 
-#### 🚀 Accessing the Website Locally
+###### 🚀 Accessing the Website Locally
 
 Once your project is set up and placed inside the htdocs folder of XAMPP:
 
@@ -78,7 +78,7 @@ http://localhost/Andon%20Monitoring/login_tech.html
 ---
 
 
-#### 👨‍💻 Technologies Used
+####### 👨‍💻 Technologies Used
 Frontend: HTML, CSS, JavaScript
 Backend: PHP
 Database: MySQL (via XAMPP)
